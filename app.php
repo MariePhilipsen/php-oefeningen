@@ -1,6 +1,10 @@
 <?php
 
-require_once "Point.php";
+require_once 'Point.php';
+require_once 'Drawable.php';
+require_once 'Shape.php';
+require_once 'Rectangle.php';
+
 
 $point1 = new Point(1,2);
 print("$point1\n");
@@ -16,4 +20,8 @@ print("aantal aangemaakte Point-objecten:".Point::getCount().PHP_EOL);
 
 unset($point1);
 
-print("aantal aangemaakte Point-objecten:".Point::getCount());
+print("aantal aangemaakte Point-objecten:".Point::getCount().PHP_EOL);
+
+$rectangle = new Rectangle($point2, 12, 2);
+echo $rectangle->caluclatePerimeter().PHP_EOL;
+$rectangle->draw();
